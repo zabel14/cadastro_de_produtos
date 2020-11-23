@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Editar produto
+{% endblock title %}
+
+{% block content %}
+<h2>Sucesso na edição, clique no botão para voltar ao índice</h2>
+<br>
+<a href="{% url 'index' %}">
+<button type="button" class="btn btn-success">Voltar à página principal</button>
+</a>
+{% endblock %}

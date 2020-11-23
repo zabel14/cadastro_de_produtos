@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cadastrar novo produto
+{% endblock title %}
+
+{% block content %}
+<form method="post"> {% csrf_token %}
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label>Nome do produto</label>
+      <input type="text" class="form-control"  placeholder="Nome do produto" name="nome">
+    </div>
+     <div class="form-group col-md-3">
+      <label>Marca do produto</label>
+      <input type="text" class="form-control"  placeholder="Marca do produto" name="marca">
+    </div>
+<div class="form-group col-md-6">
+      <label >Particularidade do produto</label>
+      <input type="text" class="form-control"  placeholder="Particularidade do produto" name="particularidade">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Quantidade do produto</label>
+      <input type="text" class="form-control" name="quantidade" placeholder="Quantidade do produto">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Categoria do produto</label>
+      <input type="text" class="form-control" name="categoria" placeholder="Categoria do produto">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+
+{% endblock %}
